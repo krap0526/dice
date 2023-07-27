@@ -20,16 +20,17 @@ print(sum(state))
 try:
     for i in state:
         prob.append(i/sum(state))
+
+
+
+    index = [1,2,3,4,5,6]
+    table = pd.DataFrame({"횟수": state, "확률값": prob}, index=index)
+    
+    print(table)
+    st.subheader("시행 결과")
+    st.dataframe(table)
 except:
     pass
-
-
-index = [1,2,3,4,5,6]
-table = pd.DataFrame({"횟수": state, "확률값": prob}, index=index)
-
-print(table)
-st.subheader("시행 결과")
-st.dataframe(table)
 
 
 
